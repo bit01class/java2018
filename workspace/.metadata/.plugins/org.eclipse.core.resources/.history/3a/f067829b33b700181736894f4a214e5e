@@ -1,0 +1,18 @@
+package com.bit.day10;
+
+class Balls{
+	private int num;
+	
+	public Balls(int a) {
+		num=a;
+	}
+}
+
+public class Ex17 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

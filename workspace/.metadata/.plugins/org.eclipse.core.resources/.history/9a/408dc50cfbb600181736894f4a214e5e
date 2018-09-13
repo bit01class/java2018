@@ -1,0 +1,13 @@
+package com.bit.day10;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		//자료형[] 배열명;
+		int[] arr1=new int[]{1,2,3,4};
+		char[] arr2=new char[]{'a','b','c'};
+		double[] arr3=new double[]{1.0,1.1,1.2,1.3};
+
+	}
+
+}

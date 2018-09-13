@@ -1,0 +1,15 @@
+package com.bit.day10;
+
+public class Ex12 {
+
+	public static void main(String[] args) {
+		// 로또 번호 생성기
+		// 방법3가지
+		// 1 ~ 45 공 공추첨-
+		// 랜덤
+		// 중복검출
+		// 오름차순
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.bit.day10;
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// ¹è¿­
+//		int a, b, c;
+//		a=1;
+//		a+1=2;
+//		a+2=3;
+		int[] arr1=new int[3];
+		arr1[0]=2456;
+		arr1[1]=8654;
+		arr1[2]=4333;
+		for(int i=0; i<3; i++){
+			System.out.println(arr1[i]);
+		}
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.bit.day10;
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+class Car{
+	int speed;
+	
+	void speedUp(){
+		speed+=10;
+		System.out.println("현재속도:"+speed+"km");
+	}
+}
