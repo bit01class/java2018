@@ -1,0 +1,11 @@
+package com.bit.day11;
+
+public class Ex08 {
+
+	public static void main(String[] args) {
+		// String 클래스의 기능
+		System.out.println("java".concat("Web"));
+
+	}
+
+}

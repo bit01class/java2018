@@ -1,0 +1,36 @@
+package com.bit.day12;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// int의 래퍼 클래스
+		Integer su1=new Integer(100);
+		Integer su2=new Integer("100");
+
+		// 생성자
+		System.out.println(su1);
+		System.out.println(su2);
+		// 필드-속성
+		System.out.println(su1.MIN_VALUE);
+		System.out.println(su1.MAX_VALUE);
+		System.out.println(su1.SIZE);
+		// 메서드-기능
+		System.out.println(su1.hashCode());
+		System.out.println(su1.toString());
+		System.out.println(su1.equals(su2));
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+package com.bit.day12;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		// 문자 래퍼클래스
+		char a='A';
+		Character ch1=new Character('A');
+		System.out.println((int)Character.MIN_VALUE);// \ u 0000
+		System.out.println((int)Character.MAX_VALUE);// \ u ffff
+		System.out.println(Character.SIZE);
+		
+	}
+
+}

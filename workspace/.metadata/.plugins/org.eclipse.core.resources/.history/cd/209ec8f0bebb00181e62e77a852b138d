@@ -1,0 +1,55 @@
+package com.bit.day13;
+
+import java.io.InputStream;
+
+/*
+ * 주민번호 확인
+ * --------------
+ * 주민번호를입력>1234561234567
+ * 입력하신 주민번호는 123456-1234567입니다
+ * 
+ * 주민번호를입력>123456-1234567
+ * '-'를 생략하고 작성하세요
+ * ----------------------------
+ * 1234561234567
+ * (int)123456.1234567
+ * 
+ * 123456-1234567
+ * 
+*/
+public class Ex06 {
+
+	public static void main(String[] args) {
+		InputStream is = System.in;
+		java.util.Scanner sc = new java.util.Scanner(is);
+		long jumin=0;
+		
+		System.out.println("-------------------------------------\n주민번호 확인\n----------------------------------");
+		
+		System.out.print("주민번호 입력>");
+		jumin=sc.nextLong();
+		System.out.println(jumin/10000000);
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

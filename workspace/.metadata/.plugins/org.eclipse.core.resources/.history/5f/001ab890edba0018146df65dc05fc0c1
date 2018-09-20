@@ -1,0 +1,12 @@
+package com.bit.day12;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		// 실수 래퍼 클래스
+		double a=3.14;
+		Double su1=new Double(3.14);
+
+	}
+
+}

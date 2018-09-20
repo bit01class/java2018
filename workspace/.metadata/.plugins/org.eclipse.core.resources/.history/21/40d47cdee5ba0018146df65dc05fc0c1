@@ -1,0 +1,13 @@
+package com.bit.day12;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// int의 래퍼 클래스
+		Integer su1=new Integer(100);
+
+		
+		System.out.println(su1);
+	}
+
+}

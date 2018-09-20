@@ -1,0 +1,12 @@
+package com.bit.day11;
+
+public class Ex08 {
+
+	public static void main(String[] args) {
+		// String 클래스의 기능
+		String st1="java".concat("Web");
+		System.out.println(st1);
+		System.out.println("문자열 길이:"+st1.length());
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.bit.day13;
+
+public class Ex05 {
+
+	public static void main(String[] args) {
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		int su=0;
+		try{
+			System.out.print("ют╥б>");
+			su=sc.nextInt();
+			System.out.println(su+"+"+10+"="+(su+10));
+		}catch(java.util.InputMismatchException e){
+			
+		}
+	}
+
+}

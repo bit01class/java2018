@@ -1,0 +1,13 @@
+package com.bit.day13;
+
+public class Ex10 {
+
+	public static void main(String[] args) {
+		try{
+		int result = 10/0;
+		}catch(java.lang.ArithmeticException e){
+			System.out.println("에러회피");
+		}
+	}
+
+}

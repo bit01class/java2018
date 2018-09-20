@@ -1,0 +1,27 @@
+package com.bit.day12;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		// 10진수 정수 래퍼클래스
+		byte a=10;
+		Byte su1=new Byte(a);
+		Byte su2=new Byte("127"); // -128~127
+		System.out.println(Byte.MAX_VALUE);
+		System.out.println(Byte.MIN_VALUE);
+		System.out.println(Byte.SIZE);
+		byte b=Byte.parseByte("127");
+		System.out.println("----------------------------------");
+		System.out.println(su1.hashCode());
+		System.out.println(su1.toString());
+		System.out.println(su1.equals(su2));
+		System.out.println(su1.intValue());
+		System.out.println(su1.byteValue());
+		System.out.println(su1.shortValue());
+		System.out.println(su1.longValue());
+		System.out.println(su1.floatValue());
+		System.out.println(su1.doubleValue());
+		System.out.println(su1.compareTo(su2));
+	}
+
+}

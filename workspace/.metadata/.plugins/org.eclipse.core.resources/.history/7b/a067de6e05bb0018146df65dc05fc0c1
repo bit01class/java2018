@@ -1,0 +1,22 @@
+package com.bit.day12;
+
+
+
+public class Ex09 {
+	public static void main(String[] args) {
+		// 입력
+		java.io.InputStream is;
+		is=System.in;
+		
+		java.util.Scanner sc;
+		sc= new java.util.Scanner(is);
+//		System.out.print("첫번째입력:");
+//		int su=sc.nextInt();// int 입력
+//		System.out.println(su);
+		
+		System.out.print("두번째입력:");
+		String msg=sc.nextLine();
+		System.out.println(msg);
+	}
+
+}

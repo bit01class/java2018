@@ -1,0 +1,50 @@
+package com.bit.day11;
+
+class Total{
+	int su;
+	
+	public Total(int su) {
+		this.su=su;
+	}
+	
+	void plus(int a){
+		su+=a;
+	}
+	Total plus(int a, Total tot){
+		su+=a;
+		return tot;
+	}
+	
+	@Override
+	public String toString(){
+		return ""+su;
+	}
+}
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		Total tot=new Total(100);
+		Total tot2=tot.plus(10,tot);
+		tot2.plus(20);
+		System.out.println(tot);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

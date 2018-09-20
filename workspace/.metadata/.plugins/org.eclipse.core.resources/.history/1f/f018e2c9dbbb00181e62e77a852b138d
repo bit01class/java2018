@@ -1,0 +1,23 @@
+package com.bit.day13;
+
+class MyException extends Exception{
+	
+}
+
+public class Ex13 {
+
+	public static void main(String[] args) {
+		// 
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		int result=0;
+		int su=0;
+		su=sc.nextInt();
+		try{
+			result=10/su;
+			System.out.println("10/"+su+"="+result);
+		}catch(java.lang.ArithmeticException e){
+			System.out.println("0으로 나눌수 없습니다");
+		}
+	}
+
+}

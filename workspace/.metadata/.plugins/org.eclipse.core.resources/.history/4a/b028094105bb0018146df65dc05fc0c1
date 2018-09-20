@@ -1,0 +1,18 @@
+package com.bit.day12;
+
+
+
+public class Ex09 {
+	public static void main(String[] args) {
+		// ют╥б
+		java.io.InputStream is;
+		is=System.in;
+		
+		java.util.Scanner sc;
+		sc= new java.util.Scanner(is);
+		
+		int su=sc.nextInt();
+		System.out.println(su);
+	}
+
+}

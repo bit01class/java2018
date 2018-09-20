@@ -1,0 +1,14 @@
+package com.bit.day13;
+
+public class Ex13 {
+
+	public static void main(String[] args) {
+		// 
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		int result=0;
+		
+		result=10/sc.nextInt();
+		System.out.println(result);
+	}
+
+}
