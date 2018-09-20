@@ -21,37 +21,23 @@ public class Ex02 {
 
 		System.out.println(title);
 
-//		boolean result=true;
-//		while(result){
-//			System.out.print("총인원>");
-//			try{
-//				tot = sc.nextInt();
-//				if(tot<=0){
-//					throw new MyNumException("0이하임으로");
-//				}
-//				result=false;
-//			}catch(java.util.InputMismatchException e){
-//				sc = new java.util.Scanner(System.in);
-//				System.out.println(e.getMessage());
-//			}catch(MyNumException e){
-//				System.out.println(e.getMessage());
-//			}
-//		}
-		try{
-			while(true){
-				try{
-					System.out.print("총인원>");
-					tot = sc.nextInt();
-					if(tot>0){
-						throw new MyNumException("정상");
-					}
-				}catch(java.util.InputMismatchException e){
-					sc = new java.util.Scanner(System.in);
+		boolean result=true;
+		while(result){
+			System.out.print("총인원>");
+			try{
+				tot = sc.nextInt();
+				if(tot<=0){
+					throw new MyNumException("0이하임으로");
 				}
+				result=false;
+			}catch(java.util.InputMismatchException e){
+				sc = new java.util.Scanner(System.in);
+				System.out.println(e.getMessage());
+			}catch(MyNumException e){
+				System.out.println(e.getMessage());
 			}
-		}catch(MyNumException e){
-			
 		}
+		
 		int input = 0;
 		
 		students = new int[tot][3];
@@ -140,14 +126,14 @@ public class Ex02 {
 			try{
 				System.out.print("학번>");
 				num=sc.nextInt();
-				if(num<=0 || num>tot){
+				if(num>=0 || num>tot){
 					throw new MyNumException("학번을 다시확인");
 				}
 				result=false;
 			}catch(java.util.InputMismatchException e){
-				sc=new java.util.Scanner(System.in);
+				
 			}catch(MyNumException e){
-				e.printStackTrace();
+				
 			}
 		}
 

@@ -21,37 +21,22 @@ public class Ex02 {
 
 		System.out.println(title);
 
-//		boolean result=true;
-//		while(result){
-//			System.out.print("총인원>");
-//			try{
-//				tot = sc.nextInt();
-//				if(tot<=0){
-//					throw new MyNumException("0이하임으로");
-//				}
-//				result=false;
-//			}catch(java.util.InputMismatchException e){
-//				sc = new java.util.Scanner(System.in);
-//				System.out.println(e.getMessage());
-//			}catch(MyNumException e){
-//				System.out.println(e.getMessage());
-//			}
-//		}
-		try{
-			while(true){
-				try{
-					System.out.print("총인원>");
-					tot = sc.nextInt();
-					if(tot>0){
-						throw new MyNumException("정상");
-					}
-				}catch(java.util.InputMismatchException e){
-					sc = new java.util.Scanner(System.in);
+		boolean result=true;
+		while(result){
+			System.out.print("총인원>");
+			try{
+				tot = sc.nextInt();
+				if(tot<=0){
+					throw new MyNumException("0이하임으로");
 				}
+				result=false;
+			}catch(java.util.InputMismatchException e){
+				
+			}catch(MyNumException e){
+				
 			}
-		}catch(MyNumException e){
-			
 		}
+		
 		int input = 0;
 		
 		students = new int[tot][3];
@@ -99,31 +84,12 @@ public class Ex02 {
 	public static void stuInput(){
 		inputCount++;
 		if (tot > inputCount - 1) {
-//			System.out.print(inputCount + "번 학생 국어>");
-//			students[inputCount - 1][0] = sc.nextInt();
-//			System.out.print(inputCount + "번 학생 영어>");
-//			students[inputCount - 1][1] = sc.nextInt();
-//			System.out.print(inputCount + "번 학생 수학>");
-//			students[inputCount - 1][2] = sc.nextInt();
-			
-			String[] msgs={"번 학생 국어>","번 학생 영어>","번 학생 수학>"};
-			for(int i=0; i<msgs.length; i++){
-				try{
-				
-					System.out.print(inputCount + msgs[i]);
-				    students[inputCount - 1][i] = sc.nextInt();
-				    if(students[inputCount - 1][i]<0||students[inputCount - 1][i]>100){
-				    	throw new MyNumException("성적범위가 아님");
-				    }
-				}catch(java.util.InputMismatchException e){
-					sc=new java.util.Scanner(System.in);
-					i--;
-				}catch(MyNumException e){
-					System.out.println(e.getMessage());
-					i--;
-				}
-			}
-			
+			System.out.print(inputCount + "번 학생 국어>");
+			students[inputCount - 1][0] = sc.nextInt();
+			System.out.print(inputCount + "번 학생 영어>");
+			students[inputCount - 1][1] = sc.nextInt();
+			System.out.print(inputCount + "번 학생 수학>");
+			students[inputCount - 1][2] = sc.nextInt();
 		} else {
 			System.out.println("입력하실 학생이 없습니다");
 		}
@@ -134,22 +100,8 @@ public class Ex02 {
 		String header2 = " ---------------------------------------------------------------"
 				+ "\n 학번\t| 국어\t| 영어\t| 수학\t| 합계\t| 평균"
 				+ "\n ---------------------------------------------------------------";
-		int num =0;
-		boolean result=true;
-		while(result){
-			try{
-				System.out.print("학번>");
-				num=sc.nextInt();
-				if(num<=0 || num>tot){
-					throw new MyNumException("학번을 다시확인");
-				}
-				result=false;
-			}catch(java.util.InputMismatchException e){
-				sc=new java.util.Scanner(System.in);
-			}catch(MyNumException e){
-				e.printStackTrace();
-			}
-		}
+		System.out.print("학번>");
+		int num = sc.nextInt();
 
 		System.out.println(header2);
 		System.out.print(num + "\t| ");

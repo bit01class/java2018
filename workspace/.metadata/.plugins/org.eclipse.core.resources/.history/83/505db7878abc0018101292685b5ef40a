@@ -46,7 +46,6 @@ public class Ex02 {
 						throw new MyNumException("Á¤»ó");
 					}
 				}catch(java.util.InputMismatchException e){
-					sc = new java.util.Scanner(System.in);
 				}
 			}
 		}catch(MyNumException e){
