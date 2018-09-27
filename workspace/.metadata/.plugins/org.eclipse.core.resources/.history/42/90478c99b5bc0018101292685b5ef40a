@@ -1,0 +1,17 @@
+package com.bit.day14;
+
+interface Lec12{
+	public abstract void func01();
+	
+	public void func12(){
+		
+	}
+}
+
+public class Ex12 {
+
+	public static void main(String[] args) {
+
+	}
+
+}

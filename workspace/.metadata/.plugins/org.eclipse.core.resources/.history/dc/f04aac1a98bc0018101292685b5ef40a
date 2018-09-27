@@ -1,0 +1,38 @@
+package com.bit.day14;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int su1=4;
+		int su2=1;
+		System.out.println("su1/su2="+func01(su1,su2)+"수입니다");
+	}
+	
+	public static char func01(int a,int b){
+		try{
+			int c=a/b;
+			if(c%2==1){
+				return '홀';
+			}
+		}catch(ArithmeticException e){
+			
+		}
+		System.out.println("정상적으로 출력을 하겠습니다");
+		return '짝';
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+package com.bit.day14;
+
+class Mashine{
+	void on(){
+		System.out.println("켰다");
+	}
+	void off(){
+		System.out.println("끄다");
+	}
+}
+
+class Tv extends Mashine{
+	
+	void work(){
+		System.out.println("화면을 출력한다");
+	}
+}
+
+class Radio extends Mashine{
+	
+	void work(){
+		System.out.println("주파수를 잡고 방송을 들려준다");
+	}
+}
+
+
+public class Ex11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

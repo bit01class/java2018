@@ -1,0 +1,25 @@
+package com.bit.day14;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int su1=3;
+		int su2=0;
+		System.out.println("su1/su2="+func01(su1,su2)+"¼öÀÔ´Ï´Ù");
+	}
+	
+	public static char func01(int a,int b){
+		try{
+			int c=a/b;
+			if(c%2==1){
+				return 'È¦';
+			}
+		}catch(ArithmeticException e){
+			
+		}
+		return 'Â¦';
+		
+	}
+
+}

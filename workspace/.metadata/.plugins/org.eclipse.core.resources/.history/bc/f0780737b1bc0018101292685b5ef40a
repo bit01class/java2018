@@ -1,0 +1,23 @@
+package com.bit.day14;
+
+class Lec10{
+	int su;
+	
+	public Lec10() {
+	}
+	
+	public void func01(){
+		System.out.println("Lec10-func01()");
+	}
+	
+}
+
+
+public class Ex10 {
+
+	public static void main(String[] args) {
+		// 추상클래스
+
+	}
+
+}

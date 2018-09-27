@@ -1,0 +1,23 @@
+package com.bit.day15;
+
+abstract class Lec01{
+	int su;
+	
+	public Lec01() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void func01(){}
+	
+	public abstract void func02();
+	
+}
+
+public class Ex01 {
+
+	public static void main(String[] args) {
+		// »ó¼Ó
+		Lec01 lec=new Lec01();
+	}
+
+}

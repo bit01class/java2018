@@ -1,0 +1,15 @@
+package com.bit.day14;
+//»ó¼Ó
+
+class Lec05 extends Object{
+	
+}
+
+public class Ex05 extends Lec05 {
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

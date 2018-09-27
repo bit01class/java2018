@@ -1,0 +1,9 @@
+package com.bit.day14.pm;
+
+class Lec01 {
+	public int su=3333;
+	
+	public void func01(){
+		System.out.println("pm.Lec01-func01()");
+	}
+}

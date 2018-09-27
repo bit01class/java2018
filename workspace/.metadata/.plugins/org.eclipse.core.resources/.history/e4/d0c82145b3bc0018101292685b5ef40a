@@ -1,0 +1,24 @@
+package com.bit.day14;
+
+class Mashine{
+	void on(){
+		System.out.println("Ä×´Ù");
+	}
+	void off(){
+		System.out.println("²ô´Ù");
+	}
+}
+
+class Tv extends Mashine{
+	
+}
+
+
+public class Ex11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

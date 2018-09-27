@@ -1,0 +1,43 @@
+package com.bit.day14;
+//상속
+
+class Lec05 extends Object{
+	int su=1111;
+	
+	Lec05() {
+	}
+	
+	void func01(){
+		System.out.println("부모의 기능1");
+	}
+}
+// private상속의대상x
+public class Ex05 extends Lec05 {
+	
+	@Override
+	void func01(){
+		System.out.println("자신의 기능1");
+	}
+	
+	public static void main(String[] args) {
+		Ex05 me=new Ex05();
+		me.func01();
+		System.out.println(me.su);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -56,6 +56,7 @@ public class Ex02 {
 		
 		students = new int[tot][3];
 		
+		
 		while (true) {
 			System.out.println(menu);
 			input = sc.nextInt();

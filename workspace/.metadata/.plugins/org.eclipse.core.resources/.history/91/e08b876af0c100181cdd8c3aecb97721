@@ -1,0 +1,16 @@
+package com.bit.day15;
+
+interface inter01{
+	// 오직 추상메서드와 상수형 변수만 갖음
+	// abstract - 생략가능
+	// 접근제한자는 오직 public - 생략가능
+	// final 생략가능
+	final int su1=1111;
+	int su2=2222;
+	
+	public abstract void func01();
+	
+	public void func02();
+	
+	void func03(); 
+}

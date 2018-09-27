@@ -1,0 +1,48 @@
+package com.bit.day15;
+
+interface Inter01{
+	// 명명규칙 - 첫글자 영문 대문자사용
+	// 오직 추상메서드와 상수형 변수만 갖음
+	// 메서드 - abstract - 생략가능
+	// 메서드 - 접근제한자는 오직 public - 생략가능
+	// 변수 - final 생략가능
+	final int su1=1111;
+	int su2=2222;
+	
+	public abstract void func01();
+	
+	public void func02();
+	
+	void func03(); 
+}
+
+interface Inter02 extends Inter01,Inter03{
+	// interface들 끼리의 상속은 extends
+	// 다중상속을 허용
+	int su2=333;
+	
+	void func03();
+	void func04();
+}
+
+interface Inter03{
+	void func04();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
