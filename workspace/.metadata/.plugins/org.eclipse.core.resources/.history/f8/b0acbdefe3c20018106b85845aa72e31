@@ -1,0 +1,52 @@
+package com.bit.day16;
+
+
+class Pencil{
+	private final int size;
+	
+	public Pencil(int size) {
+		this.size=size;
+	}
+	
+	public void draw(){
+		System.out.println("검정색 "+size+"B 연필로 줄을 긋다");
+	}
+}
+
+class Box{
+	Pencil pen;
+	
+	public void set(Pencil pen){
+		this.pen=pen;
+	}
+	
+	public Pencil get(){
+		return pen;
+	}
+	
+}
+
+public class Ex12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Box box1=new Box();
+		Pencil pen1=new Pencil(4);
+		box1.set(pen1);
+		
+		Pencil pen=box1.get();
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

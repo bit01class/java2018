@@ -1,0 +1,20 @@
+package com.bit.day15;
+
+import java.util.ArrayList;
+
+public class Ex13 {
+
+	public static void main(String[] args) {
+		// List
+		// 순서존재
+		
+		ArrayList list = new ArrayList();
+		list.add(1111);
+		list.add(2222);
+		list.add(1111);
+		for(int i=0; i<list.size(); i++){
+			System.out.println(list.get(i));
+		}
+	}
+
+}

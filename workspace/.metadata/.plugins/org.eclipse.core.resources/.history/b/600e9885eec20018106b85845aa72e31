@@ -1,0 +1,67 @@
+package com.bit.day16;
+
+// 디자인 패턴 - 팩토리 패턴
+
+class Tico{
+	void name(){
+		System.out.println("티코");
+	}
+}
+
+class Sm3{
+	void name(){
+		System.out.println("sm3");
+	}
+}
+
+class Factory<T>{
+	T car;
+	
+	void set(T car){
+		this.car=car;
+	}
+	
+	T get(){
+		return car;
+	}
+}
+
+class Template{
+	
+	static void getInstence(T car){
+		Factory fac = new Factory();
+		fac.set(car);
+		return fac;
+	}
+//	static Tico getInstence(){
+//		return car;
+//	}
+	
+}
+
+
+
+public class Ex13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Tico tico = Template.getInstence();
+		tico.name();
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

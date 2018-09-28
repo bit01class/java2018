@@ -1,0 +1,19 @@
+package com.bit.day16;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Ex16 {
+
+	public static void main(String[] args) {
+		List<Integer> list1= new ArrayList<Integer>();
+		list1.add(1111);
+		int su=list1.get(0);
+		list1=new LinkedList<Integer>();
+		
+		
+
+	}
+
+}

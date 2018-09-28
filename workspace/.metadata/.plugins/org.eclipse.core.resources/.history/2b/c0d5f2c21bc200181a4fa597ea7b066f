@@ -1,0 +1,26 @@
+package com.bit.day15;
+
+import java.util.ArrayList;
+
+public class Ex07 {
+
+	public static void main(String[] args) {
+		// ArrayList
+		ArrayList list = new ArrayList();
+		// 추가
+		list.add(1111);
+		list.add(2222);
+		list.add(3.14);
+		list.add('a');
+		list.add(false);
+		list.add("String");
+		// 삭제
+		list.remove(3);
+		list.set(3, "수정");
+		// 보기
+		System.out.println(list.get(3));
+		System.out.println(list.get(4));
+		
+	}
+
+}

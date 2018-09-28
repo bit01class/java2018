@@ -1,0 +1,24 @@
+package com.bit.day16;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Ex17 {
+
+	public static void main(String[] args) {
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		
+		map.put("a", 1111);
+		map.put("b", 2222);
+		map.put("c", 3333);
+		map.put("d", 4444);
+		
+		map.put("c", 5555);
+		
+		
+		int value = map.get("c");
+		System.out.println(value);
+
+	}
+
+}

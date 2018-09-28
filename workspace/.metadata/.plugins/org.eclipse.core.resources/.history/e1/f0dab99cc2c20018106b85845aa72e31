@@ -1,0 +1,40 @@
+package com.bit.day16;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Ex04 {
+
+	public static void main(String[] args) {
+		ArrayList list1 = new ArrayList();
+		list1.add(1111);
+		list1.add(2222);
+		list1.add(2222);
+		list1.add(2222);
+		
+		ArrayList list2 = new ArrayList(list1);
+		
+//		for(int i=0; i<list2.size(); i++)
+//		{
+//			System.out.println(list2.get(i));
+//		}
+		
+		Iterator ite = list2.iterator();
+		
+		while(ite.hasNext()){
+			System.out.println(ite.next());
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

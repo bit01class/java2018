@@ -1,0 +1,21 @@
+package com.bit.day16;
+
+class Lec14<T,E>{
+	T a;
+	E b;
+	
+	public void set(T a, E b){
+		this.a=a;
+		this.b=b;
+	}
+	
+}
+
+public class Ex14 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

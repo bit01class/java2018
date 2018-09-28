@@ -1,0 +1,24 @@
+package com.bit.day16;
+
+import java.util.LinkedList;
+
+public class Ex03 {
+
+	public static void main(String[] args) {
+		// Ω∫≈√&≈•
+		java.util.Deque deq=new LinkedList();
+		deq.offerFirst(1111);
+		deq.offerFirst(2222);
+		deq.offerFirst(3333);
+		deq.offerFirst(4444);
+//		System.out.println(deq.pollFirst());
+//		System.out.println(deq.pollFirst());
+//		System.out.println(deq.pollFirst());
+//		System.out.println(deq.pollFirst());
+		System.out.println(deq.peekLast());
+		System.out.println(deq.peekLast());
+		System.out.println(deq.peekLast());
+		System.out.println(deq.peekLast());
+	}
+
+}

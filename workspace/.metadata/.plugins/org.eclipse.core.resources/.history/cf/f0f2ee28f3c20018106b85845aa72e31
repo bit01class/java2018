@@ -1,0 +1,23 @@
+package com.bit.day16;
+
+class Lec15<T extends Number>{
+	T su;
+	
+	public void set(T a){
+		su=a;
+	}
+	
+	public T get(){
+		return su;
+	}
+	
+}
+
+public class Ex15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Lec15<Integer> me = new Lec15<Integer>();
+	}
+
+}

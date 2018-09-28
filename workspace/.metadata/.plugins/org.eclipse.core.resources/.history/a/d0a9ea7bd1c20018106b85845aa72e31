@@ -1,0 +1,58 @@
+package com.bit.day16;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+class Ball{
+	int num;
+	String color;
+	
+	public Ball(int num) {
+		this.num=num;
+		if(num<10){
+			color="노랑색";
+		}else if(num<20){
+			color="빨강색";
+		}else if(num<30){
+			color="파랑색";
+		}else if(num<40){
+			color="초록색";
+		}else{
+			color="검은색";
+		}
+	}
+	
+}
+
+public class Ex09 {
+
+	public static void main(String[] args) {
+		// lotto번호 생성기
+		Set box = new TreeSet();
+		
+		while(box.size()<6){
+			
+			Ball ball=new Ball();
+			box.add(ball);
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

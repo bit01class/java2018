@@ -1,0 +1,33 @@
+package com.bit.day16;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Ex10 {
+
+	public static void main(String[] args) {
+		// Map
+		// key, value
+		// key -> value
+		
+		Map map = new HashMap();
+		// 입력
+		map.put("aa", "value1");
+		map.put("bb", "value2");
+		map.put("cc", "value3");
+		map.put("dd", "value4");
+		
+		// 수정
+		map.put("aa", "edit1");
+		
+		// 삭제
+		map.remove("cc");
+		
+		// 보기
+		System.out.println(map.get("cc"));
+		System.out.println(map.get("aa"));
+		
+
+	}
+
+}

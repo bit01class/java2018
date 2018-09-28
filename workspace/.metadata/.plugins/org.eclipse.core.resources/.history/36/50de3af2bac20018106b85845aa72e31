@@ -1,0 +1,22 @@
+package com.bit.day16;
+
+import java.util.LinkedList;
+
+public class Ex02 {
+
+	public static void main(String[] args) {
+		// 큐 (FIFO)
+		// 선입선출 - 먼저 IN 먼저 OUT
+		// 순서(o) 중복(o)
+		java.util.List que=new LinkedList();
+		que.add(1111);
+		que.add(2222);
+		que.add(3333);
+		
+		System.out.println(que.get(0));
+		System.out.println(que.get(0));
+		System.out.println(que.get(0));
+		
+	}
+
+}
