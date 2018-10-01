@@ -34,5 +34,10 @@
     "location": "C:\\java\\workspace\\day15\\src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027C:\\java\\workspace\\day15\\src\u0027. Skipped."
+  },
+  "C:\\java\\workspace\\day16\\src": {
+    "location": "C:\\java\\workspace\\day16\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\java\\workspace\\day16\\src\u0027. Skipped."
   }
 }
