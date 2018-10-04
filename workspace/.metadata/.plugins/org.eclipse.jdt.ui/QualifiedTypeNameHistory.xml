@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
-<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
-<fullyQualifiedTypeName name="com.bit.day14.MyNumException"/>
 <fullyQualifiedTypeName name="com.bit.day14.pm.Lec01"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -23,7 +20,6 @@
 <fullyQualifiedTypeName name="java.util.Vector"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.bit.day17.Ex01"/>
 <fullyQualifiedTypeName name="com.bit.day17.Bbs"/>
 <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
@@ -44,11 +40,24 @@
 <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.io.PrintStream"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="com.bit.day17.Ex15"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="com.bit.day18.Lec02"/>
+<fullyQualifiedTypeName name="com.bit.day18.Tv"/>
+<fullyQualifiedTypeName name="com.bit.day18.Radio"/>
+<fullyQualifiedTypeName name="com.bit.day18.Machine"/>
+<fullyQualifiedTypeName name="com.bit.day18.Audio"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="com.bit.day18.Lec04.Lec44"/>
+<fullyQualifiedTypeName name="com.bit.day18.Lec01"/>
+<fullyQualifiedTypeName name="com.bit.day18.Outter.Inner"/>
+<fullyQualifiedTypeName name="Local"/>
+<fullyQualifiedTypeName name="com.bit.day18.Lec06"/>
+<fullyQualifiedTypeName name="com.bit.day18.Ex08"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

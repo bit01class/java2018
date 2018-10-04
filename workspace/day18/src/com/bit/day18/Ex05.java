@@ -37,7 +37,6 @@ class Outter{
 		System.out.println("Outter-func01()");
 	
 		Outter outt=new Outter();
-		System.out.println(outt.su2);
 		Inner inn=outt.new Inner();
 		inn.func03();
 	}
