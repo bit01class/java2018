@@ -49,5 +49,20 @@
     "location": "C:\\java\\workspace\\day18\\src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027C:\\java\\workspace\\day18\\src\u0027. Skipped."
+  },
+  "C:\\java\\workspace\\day19\\src": {
+    "location": "C:\\java\\workspace\\day19\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\java\\workspace\\day19\\src\u0027. Skipped."
+  },
+  "C:\\java\\workspace\\day20\\src": {
+    "location": "C:\\java\\workspace\\day20\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\java\\workspace\\day20\\src\u0027. Skipped."
+  },
+  "C:\\java\\workspace\\day21\\src": {
+    "location": "C:\\java\\workspace\\day21\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\java\\workspace\\day21\\src\u0027. Skipped."
   }
 }

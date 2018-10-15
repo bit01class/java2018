@@ -9,8 +9,8 @@ import java.io.IOException;
 public class Ex11 {
 
 	public static void main(String[] args) {
-		File src=new File("img.jpg");
-		File dist=new File("copy.jpg");
+		File src=new File("test09.txt");
+		File dist=new File("test11.txt");
 		try {
 			dist.createNewFile();
 		} catch (IOException e) {

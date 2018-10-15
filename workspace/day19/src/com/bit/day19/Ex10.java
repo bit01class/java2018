@@ -37,7 +37,6 @@ public class Ex10 {
 					cnt+=read;
 					list.add(arr2);
 				}
-				System.out.println("--------------------------");
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			} catch (IOException e) {

@@ -17,7 +17,7 @@ public class Ex09 {
 			e.printStackTrace();
 		}
 		
-		String msg = "한글로 작성중...";
+		String msg = "한글로     작성중...";
 		
 		byte[] arr = msg.getBytes();
 		FileOutputStream os = null;
