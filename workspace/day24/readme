@@ -1,0 +1,12 @@
+This directory (and version of CentOS) is depreciated.  
+
+CentOS-5 is now past EOL
+
+You can get the last released version of centos 5.11 here:
+
+http://vault.centos.org/5.11/
+
+Please NOTE:  this is not being maintained for security since moving to Vault.
+It will have security issues, you should upgrade to a new version instead.
+
+
