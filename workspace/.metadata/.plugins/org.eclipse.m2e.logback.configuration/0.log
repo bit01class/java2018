@@ -102,3 +102,5 @@ org.apache.lucene.index.IndexNotFoundException: no segments* file found in org.a
 2018-10-16 15:37:59,675 [Worker-4] WARN  o.e.r.i.rcp.repo.ModelRepository - 'remote-models (http://download.eclipse.org/recommenders/models/juno/, releases+snapshots)' did not send ETAG header for 'org.eclipse.recommenders:index:zip:0.0.0'.
 2018-10-17 10:48:57,411 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 16
 2018-10-17 10:48:58,327 [pool-6-thread-1] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 16
+2018-10-18 09:38:17,030 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 16
+2018-10-31 15:07:14,017 [main] INFO  c.n.h.c.p.n.NettyAsyncHttpProvider - Number of application's worked threads is 16
