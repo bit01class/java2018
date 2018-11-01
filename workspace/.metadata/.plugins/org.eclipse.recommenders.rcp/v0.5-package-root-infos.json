@@ -65,6 +65,19 @@
     "javaRuntime": true
   },
   {
+    "symbolicName": "ojdbc14",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a31515b1c6e67df53eddd358386ccf344657189b",
+    "jarFileModificationDate": "2006-02-02T00:49:38+09:00",
+    "location": "C:\\oraclexe\\app\\oracle\\product\\10.2.0\\server\\jdbc\\lib\\ojdbc14.jar",
+    "javaRuntime": false
+  },
+  {
     "symbolicName": "jre",
     "version": {
       "major": 1,
