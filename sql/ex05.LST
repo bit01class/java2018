@@ -1,0 +1,351 @@
+SQL> select sal from emp;
+
+   SAL                                                                                                                                                
+------                                                                                                                                                
+   800                                                                                                                                                
+ 1,600                                                                                                                                                
+ 1,250                                                                                                                                                
+ 2,975                                                                                                                                                
+ 1,250                                                                                                                                                
+ 2,850                                                                                                                                                
+ 2,450                                                                                                                                                
+ 3,000                                                                                                                                                
+ 5,000                                                                                                                                                
+ 1,500                                                                                                                                                
+ 1,100                                                                                                                                                
+   950                                                                                                                                                
+
+   SAL                                                                                                                                                
+------                                                                                                                                                
+ 3,000                                                                                                                                                
+ 1,300                                                                                                                                                
+
+14 개의 행이 선택되었습니다.
+
+SQL> select sum(sal) from emp;
+
+  SUM(SAL)                                                                                                                                            
+----------                                                                                                                                            
+     29025                                                                                                                                            
+
+SQL> select avg(sal) from emp;
+
+  AVG(SAL)                                                                                                                                            
+----------                                                                                                                                            
+2073.21429                                                                                                                                            
+
+SQL> select sal, avg(sal) from emp;
+select sal, avg(sal) from emp
+       *
+1행에 오류:
+ORA-00937: 단일 그룹의 그룹 함수가 아닙니다 
+
+
+SQL> select sal from emp where sal<avg(sal);
+select sal from emp where sal<avg(sal)
+                              *
+1행에 오류:
+ORA-00934: 그룹 함수는 허가되지 않습니다 
+
+
+SQL> select sum(sal), avg(sal), max(sal) from emp;
+
+  SUM(SAL)   AVG(SAL)   MAX(SAL)                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+     29025 2073.21429       5000                                                                                                                      
+
+SQL> select count(sal) from emp;
+
+COUNT(SAL)                                                                                                                                            
+----------                                                                                                                                            
+        14                                                                                                                                            
+
+SQL> select count(ename) from emp;
+
+COUNT(ENAME)                                                                                                                                          
+------------                                                                                                                                          
+          14                                                                                                                                          
+
+SQL> select count(*) from emp;
+
+  COUNT(*)                                                                                                                                            
+----------                                                                                                                                            
+        14                                                                                                                                            
+
+SQL> select count(comm) from emp;
+
+COUNT(COMM)                                                                                                                                           
+-----------                                                                                                                                           
+          4                                                                                                                                           
+
+SQL> select count(*)-count(comm) from emp;
+
+COUNT(*)-COUNT(COMM)                                                                                                                                  
+--------------------                                                                                                                                  
+                  10                                                                                                                                  
+
+SQL> select avg(sal) from emp where deptno=10;
+
+  AVG(SAL)                                                                                                                                            
+----------                                                                                                                                            
+2916.66667                                                                                                                                            
+
+SQL> select avg(sal) from emp where deptno=20;
+
+  AVG(SAL)                                                                                                                                            
+----------                                                                                                                                            
+      2175                                                                                                                                            
+
+SQL> select avg(sal) from emp where deptno=30;
+
+  AVG(SAL)                                                                                                                                            
+----------                                                                                                                                            
+1566.66667                                                                                                                                            
+
+SQL> select avg(sal) from emp group by deptno;
+
+  AVG(SAL)                                                                                                                                            
+----------                                                                                                                                            
+1566.66667                                                                                                                                            
+      2175                                                                                                                                            
+2916.66667                                                                                                                                            
+
+SQL> select * from emp;
+
+     EMPNO ENAME                JOB                       MGR HIREDATE    SAL       COMM     DEPTNO                                                   
+---------- -------------------- ------------------ ---------- -------- ------ ---------- ----------                                                   
+      7369 SMITH                CLERK                    7902 80/12/17    800                    20                                                   
+      7499 ALLEN                SALESMAN                 7698 81/02/20  1,600        300         30                                                   
+      7521 WARD                 SALESMAN                 7698 81/02/22  1,250        500         30                                                   
+      7566 JONES                MANAGER                  7839 81/04/02  2,975                    20                                                   
+      7654 MARTIN               SALESMAN                 7698 81/09/28  1,250       1400         30                                                   
+      7698 BLAKE                MANAGER                  7839 81/05/01  2,850                    30                                                   
+      7782 CLARK                MANAGER                  7839 81/06/09  2,450                    10                                                   
+      7788 SCOTT                ANALYST                  7566 87/04/19  3,000                    20                                                   
+      7839 KING                 PRESIDENT                     81/11/17  5,000                    10                                                   
+      7844 TURNER               SALESMAN                 7698 81/09/08  1,500          0         30                                                   
+      7876 ADAMS                CLERK                    7788 87/05/23  1,100                    20                                                   
+      7900 JAMES                CLERK                    7698 81/12/03    950                    30                                                   
+
+     EMPNO ENAME                JOB                       MGR HIREDATE    SAL       COMM     DEPTNO                                                   
+---------- -------------------- ------------------ ---------- -------- ------ ---------- ----------                                                   
+      7902 FORD                 ANALYST                  7566 81/12/03  3,000                    20                                                   
+      7934 MILLER               CLERK                    7782 82/01/23  1,300                    10                                                   
+
+14 개의 행이 선택되었습니다.
+
+SQL> select sum(sal) from emp where sal<=2000 group by deptno;
+
+  SUM(SAL)                                                                                                                                            
+----------                                                                                                                                            
+      6550                                                                                                                                            
+      1900                                                                                                                                            
+      1300                                                                                                                                            
+
+SQL> SELECT DEPTNO, SUM(SAL), AVG(SAL)
+  2  FROM EMP
+  3  GROUP BY DEPTNO;
+
+    DEPTNO   SUM(SAL)   AVG(SAL)                                                                                                                      
+---------- ---------- ----------                                                                                                                      
+        30       9400 1566.66667                                                                                                                      
+        20      10875       2175                                                                                                                      
+        10       8750 2916.66667                                                                                                                      
+
+SQL> SELECT empNO, SUM(SAL), AVG(SAL)
+  2  FROM EMP
+  3  GROUP BY DEPTNO;
+SELECT empNO, SUM(SAL), AVG(SAL)
+       *
+1행에 오류:
+ORA-00979: GROUP BY 표현식이 아닙니다. 
+
+
+SQL> SELECT DEPTNO, AVG(SAL)
+  2  FROM EMP
+  3  GROUP BY DEPTNO
+  4  HAVING AVG(SAL) >= 2000;
+
+    DEPTNO   AVG(SAL)                                                                                                                                 
+---------- ----------                                                                                                                                 
+        20       2175                                                                                                                                 
+        10 2916.66667                                                                                                                                 
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        10 ACCOUNTING                   NEW YORK                                                                                                      
+        20 RESEARCH                     DALLAS                                                                                                        
+        30 SALES                        CHICAGO                                                                                                       
+        40 OPERATIONS                   BOSTON                                                                                                        
+
+SQL> insert into dept (deptno, dname, loc) values (50,'마케팅','서울');
+
+1 개의 행이 만들어졌습니다.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        10 ACCOUNTING                   NEW YORK                                                                                                      
+        20 RESEARCH                     DALLAS                                                                                                        
+        30 SALES                        CHICAGO                                                                                                       
+        40 OPERATIONS                   BOSTON                                                                                                        
+        50 마케팅                       서울                                                                                                          
+
+SQL> insert into dept (deptno, dname) values (60,'비서팀');
+
+1 개의 행이 만들어졌습니다.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        10 ACCOUNTING                   NEW YORK                                                                                                      
+        20 RESEARCH                     DALLAS                                                                                                        
+        30 SALES                        CHICAGO                                                                                                       
+        40 OPERATIONS                   BOSTON                                                                                                        
+        50 마케팅                       서울                                                                                                          
+        60 비서팀                                                                                                                                     
+
+6 개의 행이 선택되었습니다.
+
+SQL> insert into dept (deptno, dname, loc) values (70,'관리팀',null);
+
+1 개의 행이 만들어졌습니다.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        10 ACCOUNTING                   NEW YORK                                                                                                      
+        20 RESEARCH                     DALLAS                                                                                                        
+        30 SALES                        CHICAGO                                                                                                       
+        40 OPERATIONS                   BOSTON                                                                                                        
+        50 마케팅                       서울                                                                                                          
+        60 비서팀                                                                                                                                     
+        70 관리팀                                                                                                                                     
+
+7 개의 행이 선택되었습니다.
+
+SQL> insert into dept (deptno, dname, loc) values (80,'회계팀','');
+
+1 개의 행이 만들어졌습니다.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        10 ACCOUNTING                   NEW YORK                                                                                                      
+        20 RESEARCH                     DALLAS                                                                                                        
+        30 SALES                        CHICAGO                                                                                                       
+        40 OPERATIONS                   BOSTON                                                                                                        
+        50 마케팅                       서울                                                                                                          
+        60 비서팀                                                                                                                                     
+        70 관리팀                                                                                                                                     
+        80 회계팀                                                                                                                                     
+
+8 개의 행이 선택되었습니다.
+
+SQL> select * from dept where loc='';
+
+선택된 레코드가 없습니다.
+
+SQL> select * from dept where loc is null;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        60 비서팀                                                                                                                                     
+        70 관리팀                                                                                                                                     
+        80 회계팀                                                                                                                                     
+
+SQL> select * from dept where loc=null;
+
+선택된 레코드가 없습니다.
+
+SQL> insert into dept values (90,'자제팀','부산');
+
+1 개의 행이 만들어졌습니다.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        10 ACCOUNTING                   NEW YORK                                                                                                      
+        20 RESEARCH                     DALLAS                                                                                                        
+        30 SALES                        CHICAGO                                                                                                       
+        40 OPERATIONS                   BOSTON                                                                                                        
+        50 마케팅                       서울                                                                                                          
+        60 비서팀                                                                                                                                     
+        70 관리팀                                                                                                                                     
+        80 회계팀                                                                                                                                     
+        90 자제팀                       부산                                                                                                          
+
+9 개의 행이 선택되었습니다.
+
+SQL> insert into dept (dname, deptno) values ('test',100);
+insert into dept (dname, deptno) values ('test',100)
+                                                *
+1행에 오류:
+ORA-01438: 이 열에 대해 지정된 전체 자릿수보다 큰 값이 허용됩니다. 
+
+
+SQL> insert into dept (dname, deptno) values ('test',55);
+
+1 개의 행이 만들어졌습니다.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        10 ACCOUNTING                   NEW YORK                                                                                                      
+        20 RESEARCH                     DALLAS                                                                                                        
+        30 SALES                        CHICAGO                                                                                                       
+        40 OPERATIONS                   BOSTON                                                                                                        
+        50 마케팅                       서울                                                                                                          
+        60 비서팀                                                                                                                                     
+        70 관리팀                                                                                                                                     
+        80 회계팀                                                                                                                                     
+        90 자제팀                       부산                                                                                                          
+        55 test                                                                                                                                       
+
+10 개의 행이 선택되었습니다.
+
+SQL> insert into dept values ('test2',65,'test');
+insert into dept values ('test2',65,'test')
+                         *
+1행에 오류:
+ORA-01722: 수치가 부적합합니다 
+
+
+SQL> insert into dept values (65,'test2');
+insert into dept values (65,'test2')
+            *
+1행에 오류:
+ORA-00947: 값의 수가 충분하지 않습니다 
+
+
+SQL> insert into dept values (65,'test2',null);
+
+1 개의 행이 만들어졌습니다.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                        LOC                                                                                                           
+---------- ---------------------------- --------------------------                                                                                    
+        10 ACCOUNTING                   NEW YORK                                                                                                      
+        20 RESEARCH                     DALLAS                                                                                                        
+        30 SALES                        CHICAGO                                                                                                       
+        40 OPERATIONS                   BOSTON                                                                                                        
+        50 마케팅                       서울                                                                                                          
+        60 비서팀                                                                                                                                     
+        70 관리팀                                                                                                                                     
+        80 회계팀                                                                                                                                     
+        90 자제팀                       부산                                                                                                          
+        55 test                                                                                                                                       
+        65 test2                                                                                                                                      
+
+11 개의 행이 선택되었습니다.
+
+SQL> spool off
