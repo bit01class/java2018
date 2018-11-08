@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
-<%@ page import="java.sql.*"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR" import="java.sql.*"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,39 +18,40 @@
 			<p><a href="menu1.jsp">회사소개</a></p>
 			<p><a href="menu2.jsp">오시는길</a></p>
 			<p><a href="list.jsp">게시판</a></p>
-			<p><a href="#">방명록</a></p>
+			<p><a href="list2.jsp">방명록</a></p>
 			</td>
 			<td>
+				<h1 align="center">방명록</h1>
 				<%
-				String sub=request.getParameter("sub");
-				String name=request.getParameter("name");
-				String content=request.getParameter("content");
-				String sql="insert into bbs01 values ((select max(num)+1 from bbs01),'"
-							+sub+"','"+name+"',sysdate,'"+content+"')";
-				System.out.println(sql);
+				String sql="SELECT * FROM EX37";
 				String driver="oracle.jdbc.driver.OracleDriver";
 				String url="jdbc:oracle:thin:@localhost:1521:xe";
 				String user="scott";
 				String password="tiger";
-				String result="입력 실패";
+				
 				Connection conn=null;
 				Statement stmt=null;
+				ResultSet rs=null;
 				try{
 					Class.forName(driver);
-					conn=DriverManager.getConnection(url,user,password);
+					conn=DriverManager.getConnection(url, user, password);
 					stmt=conn.createStatement();
-					int su=stmt.executeUpdate(sql);
-					if(su>0) result="입력 성공";
-				}catch(Exception e){
-					
+					rs=stmt.executeQuery(sql);
+					while(rs.next()){
+				%>
+				<p>[<%=rs.getDate(2) %>]<%=rs.getString(1) %></p>
+				<%
+					}
 				}finally{
+					if(rs!=null)rs.close();
 					if(stmt!=null)stmt.close();
 					if(conn!=null)conn.close();
 				}
-				
 				%>
-				<h1 align="center"><%=result %></h1>
-			
+				<form action="insert2.jsp">
+					<textarea rows="2" cols="40" name="content"></textarea>
+					<input type="submit" value="입력">
+				</form>
 			</td>
 		</tr>
 		<tr>

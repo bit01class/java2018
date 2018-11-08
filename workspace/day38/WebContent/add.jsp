@@ -33,7 +33,7 @@
 						<tr>					
 							<td>±€æ¥¿Ã</td>
 							<td>
-								<input type="text" name="name" size="12">
+								<input type="text" name="name" size="12" value="guest" readonly="readonly">
 							</td>
 						</tr>
 						<tr>					
