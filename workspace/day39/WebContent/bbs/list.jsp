@@ -38,11 +38,11 @@
 			while(rs.next()){
 		%>
 		<tr>
-			<td><%=rs.getInt(1) %></td>
-			<td><%=rs.getString(2) %></td>
-			<td><%=rs.getString(3) %></td>
-			<td><%=sdf.format(rs.getDate(4))%></td>
-			<td><%=rs.getInt(5) %></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt(1)%>"><%=rs.getInt(1) %></a></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt(1)%>"><%=rs.getString(2) %></a></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt(1)%>"><%=rs.getString(3) %></a></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt(1)%>"><%=sdf.format(rs.getDate(4))%></a></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt(1)%>"><%=rs.getInt(5) %></a></td>
 		</tr>
 		<%
 			}
