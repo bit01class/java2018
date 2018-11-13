@@ -31,6 +31,9 @@
 		if(cstmt!=null)cstmt.close();
 		if(conn!=null)conn.close();
 	}
+	String root=request.getContextPath();
+	response.sendRedirect(root);
+	//response.sendRedirect("/day40");
 	%>
 </body>
 </html>
