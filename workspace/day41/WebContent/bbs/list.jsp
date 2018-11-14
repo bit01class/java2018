@@ -20,6 +20,12 @@ if(pageNo==null){
 }
 int p=1+limit*(Integer.parseInt(pageNo)-1);
 
+String search=request.getParameter("search");
+if(search==null){
+	search="";
+}
+String keyword=search.trim();
+
 %>
 	<h1>리스트 페이지</h1>
 	<form>
@@ -40,10 +46,9 @@ int p=1+limit*(Integer.parseInt(pageNo)-1);
 			<th>조회수</th>
 		</tr>
 		<%
-		
 		String sql="select * from "
 					+" (select rownum as rn, num,sub,name,nalja,cnt from "
-					+" (select * from ex41_bbs order by num desc)) "
+					+" (select * from ex41_bbs where name like '%"+keyword+"%' order by num desc)) "
 					+" where rn between "+p+" and "+p+"+("+limit+"-1)";
 		//System.out.println(sql);		
 					//////////////////////////////////////////////////////////////
@@ -84,7 +89,7 @@ int p=1+limit*(Integer.parseInt(pageNo)-1);
 			}
 			
 			stmt=conn.createStatement();
-			rs=stmt.executeQuery("SELECT COUNT(*) AS TOT FROM EX41_BBS");
+			rs=stmt.executeQuery("SELECT COUNT(*) AS TOT FROM EX41_BBS where name like '%"+keyword+"%'");
 			if(rs.next()){
 				tot=rs.getInt("tot");
 			}
@@ -115,13 +120,13 @@ int p=1+limit*(Integer.parseInt(pageNo)-1);
 			<%
 			if(start!=1){
 			%>
-			<a href="list.jsp?page=<%=start-1%>&limit=<%=limit%>">[이전]</a>
+			<a href="list.jsp?page=<%=start-1%>&limit=<%=limit%>&search=<%=keyword%>">[이전]</a>
 			<%
 			}
 			for(int i=start; i<=end; i++){
 				if(i!=Integer.parseInt(pageNo)){
 			%>
-				<a href="list.jsp?page=<%=i%>&limit=<%=limit%>">[<%=i %>]</a>
+				<a href="list.jsp?page=<%=i%>&limit=<%=limit%>&search=<%=keyword%>">[<%=i %>]</a>
 			<%
 				}else{
 					out.print("["+i+"]");
@@ -129,13 +134,23 @@ int p=1+limit*(Integer.parseInt(pageNo)-1);
 			}
 			if(end<((tot-1)/limit)+1){
 			%>
-			<a href="list.jsp?page=<%=end+1%>&limit=<%=limit%>">[이후]</a>
+			<a href="list.jsp?page=<%=end+1%>&limit=<%=limit%>&search=<%=keyword%>">[이후]</a>
 			<%
 			}
 			%>
 			</td>
 		</tr>
+		<tr>
+			<td colspan="5" align="center">
+				<form>
+					<input type="hidden" name="limit" value="<%=limit%>">
+					글쓴이 <input type="text" name="search">
+					<input type="submit" value="검색">
+				</form>
+			</td>
+		</tr>
 	</table>
+	
 </body>
 </html>
 
