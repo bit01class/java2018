@@ -8,6 +8,8 @@
 </head>
 <body>
 <%
+System.out.println("method:"+request.getMethod());
+
 int tot=0;
 String limitTemp=request.getParameter("limit");
 if(limitTemp==null){
@@ -79,11 +81,11 @@ String keyword=search.trim();
 			while(rs.next()){
 		%>
 		<tr>
-			<td><%=rs.getInt("num") %></td>
-			<td><%=rs.getString("sub") %></td>
-			<td><%=rs.getString("name") %></td>
-			<td><%=rs.getDate("nalja") %></td>
-			<td><%=rs.getInt("cnt") %></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt("num") %>"><%=rs.getInt("num") %></a></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt("num") %>"><%=rs.getString("sub") %></a></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt("num") %>"><%=rs.getString("name") %></a></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt("num") %>"><%=rs.getDate("nalja") %></a></td>
+			<td><a href="detail.jsp?num=<%=rs.getInt("num") %>"><%=rs.getInt("cnt") %></a></td>
 		</tr>
 		<%
 			}
@@ -150,7 +152,7 @@ String keyword=search.trim();
 			</td>
 		</tr>
 	</table>
-	
+	<a href="add.jsp">[ют ╥б]</a>
 </body>
 </html>
 
