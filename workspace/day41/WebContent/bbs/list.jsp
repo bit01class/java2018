@@ -7,7 +7,30 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+int tot=0;
+String limitTemp=request.getParameter("limit");
+if(limitTemp==null){
+	limitTemp="10";
+}
+int limit=Integer.parseInt(limitTemp);
+String pageNo=request.getParameter("page");
+if(pageNo==null){
+	pageNo="1";
+}
+int p=1+limit*(Integer.parseInt(pageNo)-1);
+
+%>
 	<h1>리스트 페이지</h1>
+	<form>
+		<select name="limit">
+			<option value="5" <% if(limit==5)out.print("selected=\"selected\""); %>>5개씩 보기</option>
+			<option value="10" <% if(limit==10)out.print("selected=\"selected\""); %>>10개씩 보기</option>
+			<option value="25" <% if(limit==25)out.print("selected=\"selected\""); %>>25개씩 보기</option>
+			<option class="50" <% if(limit==50)out.print("selected=\"selected\""); %>>50개씩 보기</option>
+		</select>
+		<input type="submit" value="보기">
+	</form>
 	<table width="800">
 		<tr>
 			<th>글번호</th>
@@ -17,18 +40,12 @@
 			<th>조회수</th>
 		</tr>
 		<%
-		int tot=0;
-		String pageNo=request.getParameter("page");
-		if(pageNo==null){
-			pageNo="1";
-		}
-		int p=1+10*(Integer.parseInt(pageNo)-1);
 		
 		String sql="select * from "
 					+" (select rownum as rn, num,sub,name,nalja,cnt from "
 					+" (select * from ex41_bbs order by num desc)) "
-					+" where rn between "+p+" and "+p+"+9";
-		System.out.println(sql);		
+					+" where rn between "+p+" and "+p+"+("+limit+"-1)";
+		//System.out.println(sql);		
 					//////////////////////////////////////////////////////////////
 					//"select * from ex41_bbs where num between "
 					//+"(select max(num)-10*"+p+"-9 from ex41_bbs) "
@@ -78,13 +95,41 @@
 			if(stmt!=null)stmt.close();
 			if(conn!=null)conn.close();
 		}
+		// 1+5*0 - 1,2,3,4,5 -> (0,1,2,3,4     +1)/5 -> (page-1)/5
+		// 1+5*1 - 6,7,8,9,10	-> (5,6,7,8,9  +1)/5
+		// 1+5*2 - 11,12,13,14,15 -> (10,11,12,13,14 +1)/5
+		// 1+5*3 - 16,17,18,19
+		// 1+5*(page-1)/5
+		
+		int start=1+5*((Integer.parseInt(pageNo)-1)/5);
+		System.out.println("start:"+start);
+		int end=0;
+		if(start+4<=((tot-1)/limit)+1){
+			end=start+4;//((tot-1)/limit)+1;
+		}else{
+			end=((tot-1)/limit)+1;
+		}
 		%>
 		<tr>
 			<td colspan="5" align="center">
 			<%
-			for(int i=1; i<=((tot-1)/10)+1; i++){
+			if(start!=1){
 			%>
-				<a href="list.jsp?page=<%=i%>">[<%=i %>]</a>
+			<a href="list.jsp?page=<%=start-1%>&limit=<%=limit%>">[이전]</a>
+			<%
+			}
+			for(int i=start; i<=end; i++){
+				if(i!=Integer.parseInt(pageNo)){
+			%>
+				<a href="list.jsp?page=<%=i%>&limit=<%=limit%>">[<%=i %>]</a>
+			<%
+				}else{
+					out.print("["+i+"]");
+				}
+			}
+			if(end<((tot-1)/limit)+1){
+			%>
+			<a href="list.jsp?page=<%=end+1%>&limit=<%=limit%>">[이후]</a>
 			<%
 			}
 			%>
