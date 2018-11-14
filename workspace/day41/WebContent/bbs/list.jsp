@@ -1,0 +1,110 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR" import="java.sql.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>리스트 페이지</h1>
+	<table width="800">
+		<tr>
+			<th>글번호</th>
+			<th>제목</th>
+			<th>글쓴이</th>
+			<th>날짜</th>
+			<th>조회수</th>
+		</tr>
+		<%
+		int tot=0;
+		String pageNo=request.getParameter("page");
+		if(pageNo==null){
+			pageNo="1";
+		}
+		int p=1+10*(Integer.parseInt(pageNo)-1);
+		
+		String sql="select * from "
+					+" (select rownum as rn, num,sub,name,nalja,cnt from "
+					+" (select * from ex41_bbs order by num desc)) "
+					+" where rn between "+p+" and "+p+"+9";
+		System.out.println(sql);		
+					//////////////////////////////////////////////////////////////
+					//"select * from ex41_bbs where num between "
+					//+"(select max(num)-10*"+p+"-9 from ex41_bbs) "
+					//+"and (select max(num)-10*"+p+" from ex41_bbs)"
+					//+"(select max(num)10*0-9 from ex41_bbs) and (select max(num)-10*0 from ex41_bbs)"
+					//+"92 and 101"
+					//+"(select max(num)-10*1-9 from ex41_bbs) and (select max(num)-10*1 from ex41_bbs)"
+					//+"82 and 91"
+					//+"(select max(num)-10*2-9 from ex41_bbs) and (select max(num)-10*2 from ex41_bbs)"
+					//+"72 and 81"
+					//+" order by num desc";
+		String driver="oracle.jdbc.driver.OracleDriver";
+		String url="jdbc:oracle:thin:@localhost:1521:xe";
+		String user="scott";
+		String password="tiger";
+		
+		Connection conn=null;
+		Statement stmt=null;
+		ResultSet rs=null;
+		
+		try{
+			Class.forName(driver);
+			conn=DriverManager.getConnection(url, user, password);
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery(sql);
+			while(rs.next()){
+		%>
+		<tr>
+			<td><%=rs.getInt("num") %></td>
+			<td><%=rs.getString("sub") %></td>
+			<td><%=rs.getString("name") %></td>
+			<td><%=rs.getDate("nalja") %></td>
+			<td><%=rs.getInt("cnt") %></td>
+		</tr>
+		<%
+			}
+			
+			stmt=conn.createStatement();
+			rs=stmt.executeQuery("SELECT COUNT(*) AS TOT FROM EX41_BBS");
+			if(rs.next()){
+				tot=rs.getInt("tot");
+			}
+		}catch(Exception e){
+			
+		}finally{
+			if(rs!=null)rs.close();
+			if(stmt!=null)stmt.close();
+			if(conn!=null)conn.close();
+		}
+		%>
+		<tr>
+			<td colspan="5" align="center">
+			<%
+			for(int i=1; i<=((tot-1)/10)+1; i++){
+			%>
+				<a href="list.jsp?page=<%=i%>">[<%=i %>]</a>
+			<%
+			}
+			%>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
