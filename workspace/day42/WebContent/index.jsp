@@ -47,6 +47,7 @@
 		</tr>
 		<tr>
 			<td width="150" bgcolor="#cccccc">
+				<p><a href="index.jsp">처음으로</a></p>
 				<p><a href="update.jsp">성적입력</a></p>
 				<p><a href="edit.jsp">성적수정</a></p>
 				<p><a href="rank.jsp">합계/순위</a></p>

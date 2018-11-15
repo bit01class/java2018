@@ -1,0 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+	su1=4321;
+	int su2=9876;
+%>
+	<h2>불러올내용</h2>
+	<p>이내용을 불러들인 내용</p>
