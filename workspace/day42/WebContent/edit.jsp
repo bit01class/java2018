@@ -78,7 +78,8 @@
 				<%
 				if(param!=null){
 				%>
-				<form action="edit2.jsp">
+				<form action="update2.jsp">
+					<input type="hidden" name="next" value="/day42/">
 					<input type="hidden" name="idx" value="<%=idx%>">
 					<table>
 						<tr>
