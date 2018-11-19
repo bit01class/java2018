@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" import="java.sql.*, java.util.ArrayList, java.util.HashMap"%>
+<%@ page errorPage="../err.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -57,6 +58,7 @@
 			</tr>
 		<%} %>		
 	</table>
+	<a href="add.jsp">[±Û¾²±â]</a>
 	<%@ include file="../template/footer.jspf" %>
 </body>
 </html>
