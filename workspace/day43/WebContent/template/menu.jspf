@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 		<tr height="55">
-			<td background="imgs/bgmenu.png"></td>
-			<td background="imgs/bgmenu.png" width="170"><a href="#"><img style="border:0px" alt="" src="imgs/menu1.png"></a></td>
-			<td align="center" background="imgs/bgmenu.png" width="170"><a href="#"><img style="border:0px" alt="" src="imgs/menu2.png"></a></td>
-			<td align="center" background="imgs/bgmenu.png" width="170"><a href="#"><img style="border:0px" alt="" src="imgs/menu3.png"></a></td>
-			<td align="center" background="imgs/bgmenu.png" width="170"><a href="#"><img style="border:0px" alt="" src="imgs/menu4.png"></a></td>
-			<td background="imgs/bgmenu.png"></td>
+			<td background="/day43/imgs/bgmenu.png"></td>
+			<td background="/day43/imgs/bgmenu.png" width="170"><a href="/day43/content1.jsp"><img style="border:0px" alt="" src="/day43/imgs/menu1.png"></a></td>
+			<td align="center" background="/day43/imgs/bgmenu.png" width="170"><a href="/day43/content2.jsp"><img style="border:0px" alt="" src="/day43/imgs/menu2.png"></a></td>
+			<td align="center" background="/day43/imgs/bgmenu.png" width="170"><a href="/day43/bbs/list.jsp"><img style="border:0px" alt="" src="/day43/imgs/menu3.png"></a></td>
+			<td align="center" background="/day43/imgs/bgmenu.png" width="170"><a href="#"><img style="border:0px" alt="" src="/day43/imgs/menu4.png"></a></td>
+			<td background="/day43/imgs/bgmenu.png"></td>
 		</tr>
-		<tr>
-			<td colspan="6" align="center">
+		<tr height="800">
+			<td colspan="6" valign="top" align="center">
 				<!-- content start -->

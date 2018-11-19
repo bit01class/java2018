@@ -1,9 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="EUC-KR" import="java.sql.*"%>
 <!-- 6*4 -->
+<%
+String root=request.getContextPath();
+final String driver="oracle.jdbc.driver.OracleDriver";
+final String url="jdbc:oracle:thin:@localhost:1521:xe";
+final String user="scott";
+final String password="tiger";
+
+Connection conn=null;
+Statement stmt=null;
+ResultSet rs=null;
+%>
 	<table width="1024" align="center" border="0" cellpadding="0" cellspacing="0">
 		<tr height="100">
 			<td colspan="6" align="center">
-				<img alt="" src="imgs/logo.png">
+				<a href="<%=root %>/"><img  style="border:0px" alt="" src="<%=root %>/imgs/logo.png"></a>
 			</td>
 		</tr>
