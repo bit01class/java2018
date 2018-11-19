@@ -50,11 +50,11 @@
 				HashMap amap=list.get(i);
 		%>		
 			<tr>
-				<td><%=amap.get("num") %></td>
-				<td><%=amap.get("sub") %></td>
-				<td><%=amap.get("id") %></td>
-				<td><%=amap.get("nalja") %></td>
-				<td><%=amap.get("cnt") %></td>
+				<td><a href="detail.jsp?num=<%=amap.get("num") %>"><%=amap.get("num") %></a></td>
+				<td><a href="detail.jsp?num=<%=amap.get("num") %>"><%=amap.get("sub") %></a></td>
+				<td><a href="detail.jsp?num=<%=amap.get("num") %>"><%=amap.get("id") %></a></td>
+				<td><a href="detail.jsp?num=<%=amap.get("num") %>"><%=amap.get("nalja") %></a></td>
+				<td><a href="detail.jsp?num=<%=amap.get("num") %>"><%=amap.get("cnt") %></a></td>
 			</tr>
 		<%} %>		
 	</table>
