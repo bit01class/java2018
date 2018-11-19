@@ -5,21 +5,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
+
 </head>
 <body>
-<%
-	int su1=1234;
-%>
-	<h1>ex02 page<br></h1>
-	<p>페이지 디렉티브를 사용하여</p>
-	<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%
-	su1=4321;
-	int su2=9876;
-%>
-	<h2>불러올내용</h2>
-	<p>이내용을 불러들인 내용</p>
-	<p>상단처럼 불러오려고 합니다<br><%=su1 %><br><%=su2 %></p>
+	<%@ include file="template/header.jspf" %>
+	<%@ include file="template/menu.jspf" %>
+	
+	<img alt="" src="imgs/main.png">
+	
+	<%@ include file="template/footer.jspf" %>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
