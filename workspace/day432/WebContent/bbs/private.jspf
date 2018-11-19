@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR" import="java.sql.*"%>
+<%
+request.setCharacterEncoding("EUC-KR");
+
+final String driver="oracle.jdbc.driver.OracleDriver";
+final String url="jdbc:oracle:thin:@localhost:1521:xe";
+final String user="scott";
+final String password="tiger";
+
+Connection conn=null;
+PreparedStatement pstmt=null;
+ResultSet rs=null;
+
+%>

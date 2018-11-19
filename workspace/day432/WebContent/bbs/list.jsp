@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR" import="java.sql.*, java.util.*"%>
+<%@ include file="private.jspf" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,14 +9,6 @@
 </head>
 <body>
 <%
-	final String driver="oracle.jdbc.driver.OracleDriver";
-	final String url="jdbc:oracle:thin:@localhost:1521:xe";
-	final String user="scott";
-	final String password="tiger";
-	
-	Connection conn=null;
-	PreparedStatement pstmt=null;
-	ResultSet rs=null;
 	
 	String sql="SELECT * FROM EX43 ORDER BY NUM DESC";
 	ArrayList<HashMap<String,Object>> list = new ArrayList<HashMap<String,Object>>();
@@ -68,7 +61,7 @@
 		</tr>
 		<%} %>
 	</table>
-	
+	<a href="add.jsp">[ют ╥б]</a>
 	
 	<jsp:include page="../template/footer.jsp"></jsp:include>
 </body>
