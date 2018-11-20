@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import="java.sql.*" %>
+    
+<%!
+	final String driver="oracle.jdbc.driver.OracleDriver";
+	final String url="jdbc:oracle:thin:@localhost:1521:xe";
+	final String user="scott";
+	final String password="tiger";
+	
+	Connection conn;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	
+	public void newConnection(){
+		try{
+			Class.forName(driver);
+			conn=DriverManager.getConnection(url, user, password);
+		}catch(Exception e){
+			System.out.println("오라클 접속오류");
+		}
+	}
+%>
